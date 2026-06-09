@@ -41,6 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
             musicBtn.innerHTML = '<i class="fas fa-music"></i>';
         }
     });
+    const viewBtn = document.getElementById("viewBtn");
+
+if (viewBtn) {
+    viewBtn.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play().then(() => {
+                musicBtn.classList.add("playing");
+                musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            }).catch(err => console.log(err));
+        }
+    });
+}
 
     // --- Live Countdown Counter Logic ---
     // Targeted wedding baseline milestone: 22 June 2026, 20:00:00 IST (UTC+5:30)
