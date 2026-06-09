@@ -125,20 +125,33 @@ if (viewBtn) {
     });
 
     // --- RSVP Form Event Handling ---
-    const rsvpForm = document.getElementById("rsvpForm");
+let guestCount = 1;
 
-    rsvpForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById("guestName").value.trim();
-        const phone = document.getElementById("guestPhone").value.trim();
-        const count = document.getElementById("guestCount").value;
-        const attending = document.getElementById("attendance").value;
+const countDisplay = document.getElementById("guestCount");
 
-        // Process submission alert confirmation
-        alert(`Thank you, ${name}! Your RSVP status ("${attending}" for ${count} guest(s)) has been noted successfully.`);
-        rsvpForm.reset();
-    });
+document.getElementById("plusBtn").addEventListener("click", () => {
+    guestCount++;
+    countDisplay.innerText = guestCount;
+});
+
+document.getElementById("minusBtn").addEventListener("click", () => {
+    if(guestCount > 1){
+        guestCount--;
+        countDisplay.innerText = guestCount;
+    }
+});
+
+document.getElementById("attendingBtn").addEventListener("click", () => {
+
+    document.getElementById("responseMessage").innerHTML =
+    `🌸 Wonderful! We look forward to welcoming ${guestCount} guest(s).`;
+});
+
+document.getElementById("notAttendingBtn").addEventListener("click", () => {
+
+    document.getElementById("responseMessage").innerHTML =
+    `🙏 Thank you for your wishes. You will be missed on our special day.`;
+});
 
     // --- WhatsApp Forwarding Message Generation ---
     const whatsappBtn = document.getElementById("whatsappShare");
