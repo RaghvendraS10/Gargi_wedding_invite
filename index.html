@@ -228,40 +228,40 @@
         </div>
     </section>
 
-    <section class="section rsvp" id="rsvp">
-        <div class="container">
-            <h2 class="section-title">RSVP</h2>
-            <div class="royal-divider">
-                <span class="line"></span>
-                <i class="fas fa-envelope-open-text"></i>
-                <span class="line"></span>
+<section id="rsvp" class="rsvp-section reveal">
+    <div class="container">
+
+        <h2>Will You Grace Our Celebration?</h2>
+
+        <p class="rsvp-message">
+            Your presence would make our special day even more memorable.
+            Kindly let us know if you will be joining us.
+        </p>
+
+        <div class="guest-counter">
+            <label>Number of Guests</label>
+
+            <div class="counter-box">
+                <button id="minusBtn">−</button>
+                <span id="guestCount">1</span>
+                <button id="plusBtn">+</button>
             </div>
+        </div>
 
-            <div class="rsvp-wrapper reveal">
-                <form id="rsvpForm" class="rsvp-form">
-                    <div class="form-group">
-                        <label for="guestName">Your Full Name</label>
-                        <input type="text" id="guestName" required placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="guestPhone">Phone Number</label>
-                        <input type="tel" id="guestPhone" required placeholder="Enter your phone number">
-                    </div>
-                    <div class="form-group">
-                        <label for="guestCount">Number of Guests</label>
-                        <input type="number" id="guestCount" min="1" required placeholder="Total attendees">
-                    </div>
-                    <div class="form-group">
-                        <label for="attendance">Will You Attend?</label>
-                        <select id="attendance" required>
-                            <option value="" disabled selected>Choose an option</option>
-                            <option value="Yes">Yes, gladly accept</option>
-                            <option value="No">No, regretfully decline</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit RSVP</button>
-                </form>
+        <div class="rsvp-buttons">
+            <button id="attendingBtn" class="rsvp-btn yes-btn">
+                ✓ Delighted to Attend
+            </button>
 
+            <button id="notAttendingBtn" class="rsvp-btn no-btn">
+                ✕ Unable to Attend
+            </button>
+        </div>
+
+        <div id="responseMessage"></div>
+
+    </div>
+</section>
                 <div class="rsvp-contacts">
                     <h3>Contact Information</h3>
                     <p>For explicit assistance or directions, reach out to the family members:</p>
