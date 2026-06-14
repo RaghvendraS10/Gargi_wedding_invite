@@ -134,7 +134,7 @@ const responseMessage = document.getElementById("responseMessage");
 if(attendingBtn && responseMessage){
 
     attendingBtn.addEventListener("click", () => {
-
+        responseMessage.style.display = "block";
         responseMessage.innerHTML =
         "🌸 We are delighted to welcome you. Your presence will make our celebration even more memorable.";
 
@@ -145,7 +145,7 @@ if(attendingBtn && responseMessage){
 if(notAttendingBtn && responseMessage){
 
     notAttendingBtn.addEventListener("click", () => {
-
+        responseMessage.style.display = "block";
         responseMessage.innerHTML =
         "🙏 Thank you for your blessings and warm wishes. Though you may not join us in person, your good wishes will always remain close to our hearts.";
 
