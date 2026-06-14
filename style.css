@@ -31,21 +31,6 @@ body {
     line-height: 1.6;
 }
 
-.hero{
-    position:relative;
-
-    background-image:url("fort.jpg");
-    background-size:cover;
-    background-position:center;
-
-    height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
 .hero::before{
     content:"";
 
@@ -58,12 +43,6 @@ body {
     height:100%;
 
     background:rgba(0,0,0,0.45);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    color:white;
 }
 
 /* --- Global Scannable Typography --- */
@@ -121,7 +100,6 @@ a {
 
 /* --- Floating Elements --- */
 .music-btn {
-.music-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +127,8 @@ a {
 .music-btn:hover {
     background-color: var(--saffron);
     color: var(--maroon);
-    transform: translateY(-2px);
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.25);
 }
 
 .music-btn.playing {
@@ -193,7 +172,7 @@ a {
     position: relative;
     /* Rajput Fort / Heritage Wall architectural fallback asset styling */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+                url('fort.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -211,9 +190,11 @@ a {
     z-index: 2;
 }
 
-.hero-content {
-    z-index: 3;
-    max-width: 800px;
+.hero-content{
+    position:relative;
+    z-index:3;
+    color:white;
+    max-width:800px;
 }
 
 .flag-container {
@@ -369,8 +350,8 @@ a {
 }
 
 .photo-frame {
-    width: 220px;
-    height: 275px;
+    width: 250px;
+    height: 320px;
     margin: 0 auto 25px;
     border: 8px solid var(--ivory);
     outline: 2px solid var(--gold);
@@ -412,7 +393,7 @@ a {
 /* --- Live Countdown Timer --- */
 .countdown-section {
     background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.95)),
-                url('https://images.unsplash.com/photo-1610375229632-c7158c35a537?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+                url('fort.jpg') no-repeat center center/cover;
     color: var(--light-text);
     text-align: center;
     border-top: 3px solid var(--gold);
@@ -672,31 +653,6 @@ a {
     line-height:1.7;
 }
 
-.counter-box{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-    margin:20px 0;
-}
-
-.counter-box button{
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    font-size:22px;
-    cursor:pointer;
-    background:#800000;
-    color:white;
-}
-
-#guestCount{
-    font-size:28px;
-    font-weight:bold;
-    color:#D4AF37;
-}
-
 .rsvp-buttons{
     display:flex;
     justify-content:center;
@@ -711,6 +667,7 @@ a {
     cursor:pointer;
     font-size:16px;
     transition:0.3s;
+    min-width:220px;
 }
 
 .yes-btn{
@@ -728,10 +685,27 @@ a {
 }
 
 #responseMessage{
+    display:none;
+
     margin-top:25px;
-    font-size:18px;
-    color:#D4AF37;
-    font-weight:600;
+    padding:18px 25px;
+
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    background:rgba(212,175,55,0.08);
+
+    border:1px solid var(--gold);
+
+    border-radius:12px;
+
+    color:var(--maroon);
+
+    line-height:1.8;
+
+    font-weight:500;
 }
 .rsvp-contacts {
     background: linear-gradient(135deg, var(--maroon), #5a0000);
@@ -823,10 +797,10 @@ a {
     margin-bottom: 10px;
 }
 
-.footer-names {
-    color: var(--gold);
-    font-size: 2.2rem;
-    margin-bottom: 20px;
+.footer-names{
+    color:var(--gold);
+    font-size:1rem;
+    line-height:1.8;
 }
 
 .copyright {
