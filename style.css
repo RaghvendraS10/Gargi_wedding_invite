@@ -172,7 +172,7 @@ a {
     position: relative;
     /* Rajput Fort / Heritage Wall architectural fallback asset styling */
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                url('fort.jpg') no-repeat center center/cover;
+                url('https://images.unsplash.com/photo-1706961121783-4ae6c933983a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,6 +353,7 @@ a {
     width: 250px;
     height: 320px;
     margin: 0 auto 25px;
+    border-radius:50%;
     border: 8px solid var(--ivory);
     outline: 2px solid var(--gold);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -393,7 +394,7 @@ a {
 /* --- Live Countdown Timer --- */
 .countdown-section {
     background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.95)),
-                url('fort.jpg') no-repeat center center/cover;
+                url('https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     color: var(--light-text);
     text-align: center;
     border-top: 3px solid var(--gold);
