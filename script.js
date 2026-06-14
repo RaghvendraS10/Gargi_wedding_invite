@@ -125,34 +125,33 @@ if (viewBtn) {
     });
 
     // --- RSVP Form Event Handling ---
-let guestCount = 1;
+// --- RSVP Response Handling ---
 
-const countDisplay = document.getElementById("guestCount");
+const attendingBtn = document.getElementById("attendingBtn");
+const notAttendingBtn = document.getElementById("notAttendingBtn");
+const responseMessage = document.getElementById("responseMessage");
 
-document.getElementById("plusBtn").addEventListener("click", () => {
-    guestCount++;
-    countDisplay.innerText = guestCount;
-});
+if(attendingBtn && responseMessage){
 
-document.getElementById("minusBtn").addEventListener("click", () => {
-    if(guestCount > 1){
-        guestCount--;
-        countDisplay.innerText = guestCount;
-    }
-});
+    attendingBtn.addEventListener("click", () => {
 
-document.getElementById("attendingBtn").addEventListener("click", () => {
+        responseMessage.innerHTML =
+        "🌸 We are delighted to welcome you. Your presence will make our celebration even more memorable.";
 
-    document.getElementById("responseMessage").innerHTML =
-    `🌸 Wonderful! We look forward to welcoming ${guestCount} guest(s).`;
-});
+    });
 
-document.getElementById("notAttendingBtn").addEventListener("click", () => {
+}
 
-    document.getElementById("responseMessage").innerHTML =
-    `🙏 Thank you for your wishes. You will be missed on our special day.`;
-});
+if(notAttendingBtn && responseMessage){
 
+    notAttendingBtn.addEventListener("click", () => {
+
+        responseMessage.innerHTML =
+        "🙏 Thank you for your blessings and warm wishes. Though you may not join us in person, your good wishes will always remain close to our hearts.";
+
+    });
+
+}
     // --- WhatsApp Forwarding Message Generation ---
     const whatsappBtn = document.getElementById("whatsappShare");
 
